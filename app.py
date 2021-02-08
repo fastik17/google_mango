@@ -11,12 +11,12 @@ app = Flask(__name__)
 
 def get_credentials():
     scopes = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
-    GOOGLE_PRIVATE_KEY = env.str("GOOGLE_PRIVATE_KEY")
+    google_private_key = env.str("GOOGLE_PRIVATE_KEY")
     # The environment variable has escaped newlines, so remove the extra backslash
-    GOOGLE_PRIVATE_KEY = GOOGLE_PRIVATE_KEY.replace('\\n', '\n')
+    google_private_key = google_private_key.replace('\\n', '\n')
 
     account_info = {
-        "private_key": GOOGLE_PRIVATE_KEY,
+        "private_key": google_private_key,
         "client_email": env.str("GOOGLE_CLIENT_EMAIL"),
         "token_uri": "https://accounts.google.com/o/oauth2/token",
     }
