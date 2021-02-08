@@ -39,7 +39,6 @@ def my_form_post():
         gsheet_link = request.form['googleSheetLink']
         gsheet_data = client.open_by_url(gsheet_link).sheet1
         values = gsheet_data.get_all_records()
-        print(values)
         headers = {}
         for row in values:
             for k, v in row.items():

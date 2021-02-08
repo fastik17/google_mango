@@ -4,6 +4,8 @@ chardet==4.0.0
 click==7.1.2
 environs==9.3.1
 Flask==1.1.2
+google-api-core==1.25.1
+google-api-python-client==1.12.8
 google-auth==1.25.0
 google-auth-httplib2==0.0.4
 google-auth-oauthlib==0.4.2
@@ -11,6 +13,7 @@ googleapis-common-protos==1.52.0
 gspread==3.6.0
 httplib2==0.19.0
 idna==2.10
+itsdangerous==1.1.0
 Jinja2==2.11.3
 MarkupSafe==1.1.1
 marshmallow==3.10.0
