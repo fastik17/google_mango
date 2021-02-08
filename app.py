@@ -29,7 +29,7 @@ def get_credentials():
 
 @app.route('/')
 def my_form():
-    return render_template('form.html')
+    return render_template('homepage.html')
 
 
 @app.route('/', methods=['POST'])
@@ -47,7 +47,7 @@ def my_form_post():
                 else:
                     row[k] = {v: type(v)}
                 headers.update({k: type(k)})
-        return render_template('index.html', headers=headers, values=values)
+        return render_template('table.html', headers=headers, values=values)
     except gspread.exceptions.NoValidUrlKeyFound:
         return 'Please, provide GoogleSheet Link.'
     except gspread.exceptions.APIError as e:
